@@ -1,4 +1,12 @@
 <h1>Homepage</h1>
 <hr/>
 
-<%= link_to "Contact", contact_path %>
+<%= link_to root_path do %>
+  <i class="fa-solid fa-house"></i>
+  Home
+<% end %>
+<p>
+<%= link_to contact_path do %>
+  <i class="fa-solid fa-address-card"></i>
+  Contact
+<% end %>
