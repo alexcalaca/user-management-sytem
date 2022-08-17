@@ -25,3 +25,9 @@ puts "###"
 end
 
 puts "###"
+
+2.times do |i|  
+  user = User.create!(email: "email#{i+7}@email.com", password: "default")    
+  user.inactive!
+  puts "User #{user.email} created. Role: #{user.roles.pluck(:name)}. Account status: #{user.account_status}"
+end
