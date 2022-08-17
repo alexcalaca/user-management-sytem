@@ -1,25 +1,43 @@
-# README
+<center><img src="https://user-images.githubusercontent.com/22925257/185037955-a9ef2326-d200-4605-a250-6f063818b171.png" width="300" height="150" align="center"></center>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+# User Management System
 
-* Ruby version
+> by AC Alexandre Calaça
 
-* System dependencies
+<br/>
 
-* Configuration
+Description: 
 
-* Database creation
+Live view: [in progress] <br/><br/>
 
-* Database initialization
+___
 
-* How to run the test suite
+## Technologies used
+```
+Ruby on Rails mainly.
+```
+<br/>
+ ___
+ 
 
-* Services (job queues, cache servers, search engines, etc.)
+## Technical Features
+- 
 
-* Deployment instructions
+___
 
-* ...
-# user-management-sytem
+## Setup
+
+
+___
+
+## Usage
+
+
+
+___
+
+## License
+
+It's available under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
