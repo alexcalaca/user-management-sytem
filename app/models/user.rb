@@ -22,6 +22,10 @@ class User < ApplicationRecord
   def inactive_message
     "You are not allowed to log in. Your account is inactive"
   end
+
+  def deactivate_user
+    inactive! unless inactive?
+  end
   
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
