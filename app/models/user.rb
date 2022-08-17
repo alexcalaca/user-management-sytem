@@ -14,6 +14,14 @@ class User < ApplicationRecord
       self.account_status ||= :active
     end
   end
+
+  def active_for_authentication?
+    super && active?
+  end
+
+  def inactive_message
+    "You are not allowed to log in. Your account is inactive"
+  end
   
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
