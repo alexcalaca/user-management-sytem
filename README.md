@@ -21,8 +21,8 @@ Ruby on Rails mainly.
  ___
  
 
-## Technical Features
-- 
+## Main Features
+- Prevent inactive user of logging in
 
 ___
 
