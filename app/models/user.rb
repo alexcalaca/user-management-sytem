@@ -6,8 +6,15 @@ class User < ApplicationRecord
   def assign_default_role
     self.add_role(:newuser) if self.roles.blank?
   end
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+
+  enum account_status: [:active, :inactive]
+  
+  after_initialize do
+    if self.new_record?
+      self.account_status ||= :active
+    end
+  end
+  
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 end
