@@ -7,13 +7,17 @@ class User < ApplicationRecord
     self.add_role(:newuser) if self.roles.blank?
   end
 
+  def user_role
+    self.roles.pluck("name")
+  end
+
   enum account_status: [:active, :inactive]
   
   after_initialize do
     if self.new_record?
       self.account_status ||= :active
     end
-  end
+  end  
 
   def active_for_authentication?
     super && active?
