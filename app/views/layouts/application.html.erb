@@ -13,6 +13,8 @@
   </head>
 
   <body>
+  <h2><%= current_user.name %></h2>
+  <%= current_user.roles.pluck("name") %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
