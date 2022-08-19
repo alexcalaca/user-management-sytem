@@ -1,3 +1,9 @@
+  <strong>Name:</strong> <%= @user.name %></br>
+  <strong>Email:</strong>  <%= @user.email %> </br>
+  <strong>Roles:</strong> <%= @user.user_role %> </br>
+  Actual <strong>Account status:</strong> <%= @user.account_status %> </p>
+
+
 <%= form_with(model: user) do |form| %>
   <% if user.errors.any? %>
     <div id="error_explanation">
@@ -10,26 +16,16 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.email_field :email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :account_status %>                
+  
+  <div class="field">    
+    Change <%= form.label :account_status %>                
     <%= form.select(:account_status, User.account_statuses.keys.map {|account_status| [account_status.titleize,account_status]}) %>
-  </div>
+  </div></p>  
 
-  <div class="field">
+  <!-- <div class="field">    
     <%= form.label :role %>
-      <%= form.collection_check_boxes :role_ids, Role.all, :id, :name %>
-  </div>  
+    <%= form.collection_check_boxes :role_ids, Role.all, :id, :name %>
+  </div>  -->
 
   <div class="actions">
     <%= form.submit %>
