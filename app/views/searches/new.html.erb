@@ -1,0 +1,16 @@
+<h1>Advanced Search</h1>
+
+<%= form_with model: @search do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :email %>
+    <%= f.text_field :email %> 
+
+    <%= f.label :role %>
+    <%= f.select :role, options_for_select(@roles), include_blank: true %><br>      
+    
+    <%= f.submit "Search" %>
+<% end %>
+
+<p><%= link_to "Back to all users", users_path %></p>

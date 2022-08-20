@@ -8,7 +8,7 @@ class User < ApplicationRecord
   end
 
   def user_role
-    self.roles.pluck("name")
+    roles.pluck("name")
   end
 
   enum account_status: [:active, :inactive]
