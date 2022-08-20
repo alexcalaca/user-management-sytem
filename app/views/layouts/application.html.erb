@@ -13,8 +13,10 @@
   </head>
 
   <body>
-  <h2><%= current_user.name %></h2>
-  <%= current_user.roles.pluck("name") %>
+    <% if user_signed_in? %>
+      <%= current_user.roles.pluck(:name) %>
+    <% end %>
+  
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
