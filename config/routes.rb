@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   resources :users 
   resources :searches
 
+  namespace :api do
+    # Code here  
+  end
+
   devise_scope :user do  
     get '/users/sign_out' => 'devise/sessions#destroy'     
  end
