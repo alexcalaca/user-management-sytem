@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   resources :searches
 
   namespace :api, defaults: { format: :json} do
-    # Code here  
+    namespace :v1 do
+      # Resources here
+    end
   end
 
   devise_scope :user do  
