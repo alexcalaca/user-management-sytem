@@ -13,10 +13,15 @@ Live view: Not avaibable.
 ___
 
 ## Technologies used
+Main Ruby
 ```
-Ruby on Rails mainly.
+Rails, devise, pundit, webpacker and rolify
 ```
-<br/>
+
+JS dependencies and other libraries
+```
+Fontawesome and bootstrap
+```
  ___
  
 
