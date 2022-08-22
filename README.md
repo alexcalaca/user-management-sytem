@@ -25,15 +25,20 @@ Fontawesome and bootstrap
  ___
  
 
-## Main Features
+## Extra Features
 - Prevent inactive user of logging in
+After seeding (Rails db:seed) the database, Log in with the user *email7@gmail.com*. The password is *default*
+
+- Initial frontend configuration with a CSS library
+Bootstrap was installed via yarn.
 
 ___
 
 ## Setup
 ### Requirements
-- Ruby 2.3.7
+- Ruby 2.7.3
 - Rails 6.1.6.1
+- Node 16.16.0
 - Postgresql Databse
 
 
@@ -58,7 +63,6 @@ Password: default
 
 The password is the word "default" (without double quotes)
 ___
-
 
 
 ## License
