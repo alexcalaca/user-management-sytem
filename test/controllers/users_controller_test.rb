@@ -1,11 +1,23 @@
 require "test_helper"
 
 class UsersControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
+
   setup do
-    @user = users(:one)
+    #get '/users/sign_in'
+    @user = create(:user)
+    #@user.save
+    #login_as(@user, :scope => :user)
+
+    #sign_in users(:user_001)    
+    #post user_session_url
+
+    #follow_redirect!
+    #assert_response :success    
   end
 
   test "should get index" do
+    sign_in(@user)
     get users_url
     assert_response :success
   end
