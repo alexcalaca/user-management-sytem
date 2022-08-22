@@ -29,7 +29,7 @@ Fontawesome and bootstrap
 - Prevent inactive user of logging in
 After seeding (Rails db:seed) the database, Log in with the user *email7@gmail.com*. The password is *default*
 
-- Initial frontend configuration with a CSS library
+- Initial frontend configuration with a CSS library <br/>
 Bootstrap was installed via yarn.
 
 ___
